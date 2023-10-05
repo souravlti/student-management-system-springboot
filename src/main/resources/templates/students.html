@@ -59,9 +59,11 @@
 					<td>
 						<a th:href = "@{/students/edit/{id}(id=${student.id})}"
 						 class = "btn btn-primary">Update</a>
-						
-						<a th:href = "@{/students/{id}(id=${student.id})}"
-						 class = "btn btn-danger">Delete</a>
+						<form method="DELETE" th:action="@{/students/{id}(id=${student.id})}">
+    <button type="submit" name="Delete" value="value" class="btn btn-danger">Delete</button>
+</form> 
+<!-- 						<a th:href = "@{/students/{id}(id=${student.id})}"
+						 class = "btn btn-danger">Delete</a> -->
 						 
 					</td>
 				</tr>
