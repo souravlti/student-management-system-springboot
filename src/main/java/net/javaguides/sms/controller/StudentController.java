@@ -67,7 +67,7 @@ public class StudentController {
 	}
 	
 	// handler method to handle delete student request
-	@DeleteMapping("/students/{id}")
+	@GetMapping("/students/{id}")
 	public void deleteStudent(@PathVariable Long id) {
 		studentService.deleteStudentById(id);
 		return "redirect:/students";
